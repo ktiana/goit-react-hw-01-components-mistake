@@ -6,22 +6,29 @@ import { Statistics } from '../components/Statistics/Statistics';
 import { Profile } from './Profile/Profile';
 import { FriendList } from './FriendList/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyleComponent } from 'styles/GlobalStyles';
+import { theme } from 'styles/theme';
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      <Profile data={data} />
-      <Statistics title="Upload stats" stats={stats} />
-      <FriendList friends={friends} />
-      <TransactionHistory transactions={transactions} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div
+        style={{
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+          fontSize: 26,
+          color: '#010101',
+          gap: '20px',
+        }}
+      >
+        <Profile data={data} />
+        <Statistics title="Upload stats" stats={stats} />
+        <FriendList friends={friends} />
+        <TransactionHistory transactions={transactions} />
+        <GlobalStyleComponent />
+      </div>
+    </ThemeProvider>
   );
 };

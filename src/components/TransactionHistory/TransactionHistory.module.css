@@ -1,0 +1,27 @@
+table {
+  width: 750px;
+  margin-top: 20px;
+  max-width: 700px;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(121, 122, 124);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  padding-left: 10px;
+  background: #a0a0a0;
+  color: white;
+}
+
+td,
+th {
+  border: 1px solid rgb(148, 146, 146);
+  text-align: left;
+}
