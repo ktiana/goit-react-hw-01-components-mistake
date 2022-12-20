@@ -1,4 +1,5 @@
 import css from './FriendList.module.css';
+import PropTypes from 'prop-types';
 export const FriendList = ({ friends }) => (
   <section className={css.friends}>
     <ul className={css.friendList}>
@@ -19,3 +20,10 @@ export const FriendList = ({ friends }) => (
     </ul>
   </section>
 );
+
+FriendList.propTypes = {
+  id: PropTypes.number.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
